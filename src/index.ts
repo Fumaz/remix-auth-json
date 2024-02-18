@@ -1,14 +1,14 @@
 import { AppLoadContext, SessionStorage } from "@remix-run/server-runtime";
 import { AuthenticateOptions, Strategy } from "remix-auth";
 
-export interface FormStrategyVerifyParams {
+export interface JsonStrategyVerifyParams {
   json: any;
   context?: AppLoadContext;
 }
 
-export class FormStrategy<User> extends Strategy<
+export class JsonStrategy<User> extends Strategy<
   User,
-  FormStrategyVerifyParams
+  JsonStrategyVerifyParams
 > {
   name = "json";
 
